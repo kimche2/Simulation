@@ -22,11 +22,11 @@ public class Coordinates {
 
     @Override
     public int hashCode() {
-        return Objects.hash(column, row);
+        return Objec ts.hash(column, row);
     }
 
     @Override
     public String toString() {
-        return "Coordinates " + "column: " + column + ", row: " + row +
+        return "Coordinates " + "column: " + column + ", r  ow: " + row +
     }
 }

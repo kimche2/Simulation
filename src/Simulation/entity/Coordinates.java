@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Coordinates {
 
 
-    private  int column;
+    private int column;
     private int row;
 
     public Coordinates(int column, int row) {
@@ -14,7 +14,7 @@ public class Coordinates {
     }
 
     @Override
-    public boolean equal s(Object o) {
+    public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Coordinates that = (Coordinates) o;
         return column == that.column && row == that.row;
@@ -22,11 +22,11 @@ public class Coordinates {
 
     @Override
     public int hashCode() {
-        return Objec ts.hash(column, row);
+        return Objects.hash(column, row);
     }
 
     @Override
     public String toString() {
-        return "Coordinates " + "column: " + column + ", r  ow: " + row +
+        return "column: " + column + ", row: " + row;
     }
 }

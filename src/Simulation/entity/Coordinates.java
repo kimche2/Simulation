@@ -14,7 +14,7 @@ public class Coordinates {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equal s(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Coordinates that = (Coordinates) o;
         return column == that.column && row == that.row;

@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Coordinates {
 
 
-    private  int column;
+    private int column;
     private int row;
 
     public Coordinates(int column, int row) {
@@ -27,6 +27,6 @@ public class Coordinates {
 
     @Override
     public String toString() {
-        return "Coordinates " + "column: " + column + ", row: " + row +
+        return "column: " + column + ", row: " + row;
     }
 }

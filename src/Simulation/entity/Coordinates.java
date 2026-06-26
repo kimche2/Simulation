@@ -13,6 +13,14 @@ public class Coordinates {
         this.row = row;
     }
 
+    public int getRow() {
+        return row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;

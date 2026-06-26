@@ -6,7 +6,8 @@ import Simulation.entity.Entity;
 import java.util.HashMap;
 
 public class Map {
-    private final Map<Coordinates, Entity> entities = new HashMap<>();
+    // TODO: Нужно добавить хэшмап, пока хз как.
+    private Map<Coordinates, Entity> entities = new HashMap<>();
 
     private final int height;
     private final int width;
@@ -24,27 +25,37 @@ public class Map {
         return width;
     }
 
-    public void addEntity (Coordinates coordinates, Entity entity) {
-
-    }
-
-    public void removeEntity (Coordinates coordinates) {
-
-    }
-
-    public void getEntity() {
-
-    }
-
-    public void isEntity (Coordinates coordinates) {
-
-    }
-
-    public void getEntities() {
-
+    public void addEntity(Coordinates coordinates, Entity entity) {
+        if (isInBounds(coordinates) && !isСellOccupied(coordinates)) {
+            entities.put(coordinates, entity);
+        }
     }
 
 
+    public void removeEntity(Coordinates coordinates) {
+        entities.remove(coordinates);
+    }
 
+    public Entity getEntity(Coordinates coordinates) {
+        return entities.get(coordinates);
+
+    }
+
+    public boolean isСellOccupied(Coordinates coordinates) {
+        if (entities.containsKey(coordinates)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isInBounds(Coordinates coordinates) {
+        if (coordinates.getRow() >= 0 && coordinates.getRow() < height) {
+            if (coordinates.getColumn() >= 0 && coordinates.getColumn() < width) {
+                return true;
+            }
+
+        }
+        return false;
+    }
 
 }

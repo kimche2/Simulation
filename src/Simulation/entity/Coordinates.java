@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Coordinates {
 
-
-    private int column;
     private int row;
+    private int column;
+
 
     public Coordinates(int column, int row) {
         this.column = column;

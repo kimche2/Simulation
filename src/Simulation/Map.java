@@ -23,4 +23,28 @@ public class Map {
     public int getWidth() {
         return width;
     }
+
+    public void addEntity (Coordinates coordinates, Entity entity) {
+
+    }
+
+    public void removeEntity (Coordinates coordinates) {
+
+    }
+
+    public void getEntity() {
+
+    }
+
+    public void isEntity (Coordinates coordinates) {
+
+    }
+
+    public void getEntities() {
+
+    }
+
+
+
+
 }

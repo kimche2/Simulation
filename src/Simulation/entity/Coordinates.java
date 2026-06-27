@@ -4,13 +4,21 @@ import java.util.Objects;
 
 public class Coordinates {
 
-
-    private int column;
     private int row;
+    private int column;
+
 
     public Coordinates(int column, int row) {
         this.column = column;
         this.row = row;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getColumn() {
+        return column;
     }
 
     @Override

@@ -22,7 +22,7 @@ public class Simulation {
     }
 
     public void startSimulation() throws InterruptedException {
-        isRunning = true;
+
 
         for (Action action : initActions) { // Расставляем сущности initActions
             action.execute(worldMap);
@@ -36,16 +36,17 @@ public class Simulation {
             }
             renderer.render(worldMap); // показываем изменение после хода
             turnCounter++; // считаем ходы
-            Thread.sleep(2000); // пауза для того что бы видеть изменения на карте.
+            pauseSimulation();
         }
 
     }
 
     public void nextTurn() {
+        // TODO: Надо разбить метод старт симуляция.
 
     }
 
-    public void pauseSimulation() {
-
+    public void pauseSimulation() throws InterruptedException {
+        Thread.sleep(1000); // пауза для того что бы видеть изменения на карте.
     }
 }

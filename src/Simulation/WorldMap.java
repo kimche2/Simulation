@@ -4,15 +4,16 @@ import Simulation.entity.Coordinates;
 import Simulation.entity.Entity;
 
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
 
-public class Map {
-    // TODO: Нужно добавить хэшмап, пока хз как.
+public class WorldMap {
     private Map<Coordinates, Entity> entities = new HashMap<>();
 
     private final int height;
     private final int width;
 
-    public Map(int height, int width) {
+    public WorldMap(int height, int width) {
         this.height = height;
         this.width = width;
     }
@@ -26,7 +27,7 @@ public class Map {
     }
 
     public void addEntity(Coordinates coordinates, Entity entity) {
-        if (isInBounds(coordinates) && !isСellOccupied(coordinates)) {
+        if (isInBounds(coordinates) && !isCellOccupied(coordinates)) {
             entities.put(coordinates, entity);
         }
     }
@@ -41,7 +42,7 @@ public class Map {
 
     }
 
-    public boolean isСellOccupied(Coordinates coordinates) {
+    public boolean isCellOccupied(Coordinates coordinates) {
         if (entities.containsKey(coordinates)) {
             return true;
         }
@@ -57,5 +58,14 @@ public class Map {
         }
         return false;
     }
+
+    public Coordinates getRandomEmptyCoordinates() {
+        Random random = new Random();
+
+                Coordinates coordinates;
+                if (coordinates == null) {
+                    return coordinates;
+    }
+
 
 }

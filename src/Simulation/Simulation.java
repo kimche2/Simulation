@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Simulation {
+
     private int turnCounter = 0;
     List<Action> initActions;
     List<Action> turnActions;

@@ -11,9 +11,6 @@ import java.util.Random;
 
 public class SpawnEntitiesAction implements Action {
     Random random = new Random();
-    Grass grass = new Grass();
-    Herbivore herbivore = new Herbivore();
-    Predator predator = new Predator();
 
     @Override
     public void execute(WorldMap worldMap) {

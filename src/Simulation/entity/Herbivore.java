@@ -4,8 +4,8 @@ import java.util.Map;
 
 public class Herbivore extends Creature {
 
-    public Herbivore( int speed, int hp, int maxhp) {
-        super( speed, hp, maxhp);
+    public Herbivore(int speed, int hp, int maxhp) {
+        super(speed, hp, maxhp);
     }
 
     @Override
@@ -15,6 +15,7 @@ public class Herbivore extends Creature {
 
     @Override
     public void makeMove(Map map) {
+
         // TODO: Реализовать логику передвижения.
         // перемещение по оси
         // алгоритм поиска в ширину.

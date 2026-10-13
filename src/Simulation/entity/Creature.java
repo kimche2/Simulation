@@ -7,10 +7,12 @@ abstract public class Creature extends Entity {
     private int hp;
     private int maxhp;
 
-    public Creature( int speed, int hp, int maxhp) {
+
+    public Creature(int speed, int hp, int maxhp) {
         this.speed = speed;
         this.hp = hp;
         this.maxhp = maxhp;
+
     }
 
     public int getSpeed() {

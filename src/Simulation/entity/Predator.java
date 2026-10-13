@@ -3,10 +3,10 @@ package Simulation.entity;
 import java.util.Map;
 
 public class Predator extends Creature {
-    private int attackPower;
+    private int attackPower = 1;
 
-    public Predator( int speed, int hp, int maxhp, int attackPower) {
-        super( speed, hp, maxhp);
+    public Predator(int speed, int hp, int maxhp, int attackPower) {
+        super(speed, hp, maxhp);
         this.attackPower = attackPower;
     }
 
@@ -14,9 +14,14 @@ public class Predator extends Creature {
         return attackPower;
     }
 
+    public void causeDamage(Creature target) {
+       target.takeDamage(getAttackPower());
+    }
+
 
     @Override
     public void makeMove(Map map) {
+
         // TODO: Реализовать логику передвижения.
     }
 
@@ -26,8 +31,7 @@ public class Predator extends Creature {
     // TODO: 2 метод получает в параметры координаты и переставляет существо на эти координаты .
 
 
-
-@Override
+    @Override
     public String getSymbol() {
         return "\uD83D\uDC3A";
     }

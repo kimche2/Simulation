@@ -68,18 +68,18 @@ public class WorldMap {
 
 
     // Получить список всех координат по сущности Трава.. Буду запрашивать данный список травоядным.
-    public List<Coordinates> getAllGrassCoordinates () {
-        List<Coordinates> coordinatesOfAllGrass = new ArrayList<>();
-        Collection<Entity> allEntities = getAllEntities();
-        for (Entity entity : allEntities) {
-            if (entity instanceof Grass) {
-                Coordinates coordinates = entities.g();
-                coordinatesOfAllGrass.add(coordinates);
-                // Нужно реализовать логику поиска по значению Entity ключа Coordinates
-            }
-
-        }
-        return coordinatesOfAllGrass;
-
-    }
+//    public List<Coordinates> getAllGrassCoordinates () {
+//        List<Coordinates> coordinatesOfAllGrass = new ArrayList<>();
+//        Collection<Entity> allEntities = getAllEntities();
+//        for (Entity entity : allEntities) {
+//            if (entity instanceof Grass) {
+//                Coordinates coordinates = entities.g();
+//                coordinatesOfAllGrass.add(coordinates);
+//                // Нужно реализовать логику поиска по значению Entity ключа Coordinates
+//            }
+//
+//        }
+//        return coordinatesOfAllGrass;
+//
+//    }
 }

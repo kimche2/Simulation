@@ -14,7 +14,7 @@ public class Predator extends Creature {
         return attackPower;
     }
 
-    public void causeDamage(Creature target) {
+    public void attack (Creature target) {
        target.takeDamage(getAttackPower());
     }
 

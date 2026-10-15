@@ -4,13 +4,19 @@ import java.util.Map;
 
 public class Herbivore extends Creature {
 
+
     public Herbivore(int speed, int hp, int maxhp) {
         super(speed, hp, maxhp);
+
     }
 
     @Override
     public String getSymbol() {
         return "\uD83D\uDC07";
+    }
+
+    public void eatGrass (Creature target) {
+        target.heal(1);
     }
 
     @Override

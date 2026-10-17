@@ -1,5 +1,7 @@
 package Simulation.entity;
 
+import Simulation.WorldMap;
+
 import java.util.Map;
 
 public class Herbivore extends Creature {
@@ -15,8 +17,9 @@ public class Herbivore extends Creature {
         return "\uD83D\uDC07";
     }
 
-    public void eatGrass (Creature target) {
+    public void eatGrass (Creature target, WorldMap remove, Coordinates coordinates) {
         target.heal(1);
+        remove.removeEntity(coordinates);
     }
 
     @Override

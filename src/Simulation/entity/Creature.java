@@ -7,11 +7,12 @@ abstract public class Creature extends Entity {
     private int hp;
     private int maxhp;
 
-    public Creature(Coordinates coordinates, int speed, int hp, int maxhp) {
-        super(coordinates);
+
+    public Creature(int speed, int hp, int maxhp) {
         this.speed = speed;
         this.hp = hp;
         this.maxhp = maxhp;
+
     }
 
     public int getSpeed() {
@@ -44,4 +45,10 @@ abstract public class Creature extends Entity {
 
     public abstract void makeMove(Map map);
 
+
+    /*
+    1. Понять на какую клетку идти
+    2.
+
+     */
 }

@@ -10,12 +10,17 @@ public class Predator extends Creature {
         this.attackPower = attackPower;
     }
 
+
+
     public int getAttackPower() {
         return attackPower;
     }
 
     public void attack (Creature target) {
        target.takeDamage(getAttackPower());
+       if (target.getHp() == 0) {
+           heal(1);
+       }
     }
 
 

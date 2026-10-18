@@ -20,16 +20,24 @@ public class Main {
         worldMap.addEntity(new Coordinates(4, 9), herbivore);
 
 
+
+
         Predator predator = new Predator(3, 4, 5, 1);
 
         worldMap.addEntity(new Coordinates(7, 6), predator);
 
-        
+
 
 
         Grass grass = new Grass();
 
-        worldMap.addEntity(new Coordinates(6, 9), grass);
+        worldMap.addEntity(new Coordinates(4, 8), grass);
+
+        worldMapRenderer.render(worldMap);
+
+        System.out.println();
+
+        herbivore.eatGrass( worldMap, new Coordinates(4 , 8) );
 
 
 

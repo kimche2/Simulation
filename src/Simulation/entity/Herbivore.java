@@ -17,9 +17,9 @@ public class Herbivore extends Creature {
         return "\uD83D\uDC07";
     }
 
-    public void eatGrass (Creature target, WorldMap remove, Coordinates coordinates) {
-        target.heal(1);
-        remove.removeEntity(coordinates);
+    public void eatGrass ( WorldMap worldMap, Coordinates coordinates) {
+        heal(1);
+        worldMap.removeEntity(coordinates);
     }
 
     @Override

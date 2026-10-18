@@ -1,11 +1,15 @@
 package Simulation.entity;
 
+import Simulation.WorldMap;
+
 import java.util.Map;
 
 public class Herbivore extends Creature {
 
-    public Herbivore(Coordinates coordinates, int speed, int hp, int maxhp) {
-        super(coordinates, speed, hp, maxhp);
+
+    public Herbivore(int speed, int hp, int maxhp) {
+        super(speed, hp, maxhp);
+
     }
 
     @Override
@@ -13,9 +17,24 @@ public class Herbivore extends Creature {
         return "\uD83D\uDC07";
     }
 
+    public void eatGrass ( WorldMap worldMap, Coordinates coordinates) {
+        heal(1);
+        worldMap.removeEntity(coordinates);
+    }
+
     @Override
     public void makeMove(Map map) {
-        // TODO: Реализовать логику передвижения.
 
+        // TODO: Реализовать логику передвижения.
+        // перемещение по оси
+        // алгоритм поиска в ширину.
     }
+
+    // TODO: 1 метод который возвращает координату, на которую нужно встать для того что бы найти траву. реализовать поиск в ширину.
+
+
+    // TODO: 2 метод получает в параметры координаты и переставляет существо на эти координаты . Вызвать сеттер
+
+
+    //
 }
